@@ -5,5 +5,6 @@ public class CPTAethan{
 		Console con = new Console();
 		con.println("skibidi");
 		con.println("hello world");
+		con.println("oh my goodness valentine");
 	}
 }
