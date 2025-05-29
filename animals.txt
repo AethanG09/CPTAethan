@@ -1,0 +1,10 @@
+dolphin
+elephant
+kangaroo
+gorilla
+cheetah
+chimpanzee
+panther
+crocodile
+flamingo
+ostrich
