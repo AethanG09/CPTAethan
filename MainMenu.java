@@ -17,10 +17,9 @@ public class MainMenu{
 	
 	}else if(intChoice == 2){
 		con.println("hello2");
-		TextInputFile leaderboard = new TextInputFile("leaderboard.txt");
-			while(leaderboard.eof()==false){
-				con.println(leaderboard);
-			}
+		con(CPTTools.leadcode);
+		
+
 	
 	
 	}else if(intChoice == 3){
