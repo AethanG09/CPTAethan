@@ -4,6 +4,10 @@ public class MainMenu{
 	public static void main(String[] args){
 		Console con = new Console();
 		int intChoice;
+		int intMS;
+		
+		//LoadImage(String 
+		
 
 		con.println("Type '1' to play game");
 		con.println("Type '2' to see leaderboard");
@@ -17,7 +21,7 @@ public class MainMenu{
 	
 	}else if(intChoice == 2){
 		con.println("hello2");
-		con(CPTTools.leadcode);
+		CPTTools.leadcode(con);
 		
 
 	
