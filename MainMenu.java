@@ -2,11 +2,10 @@ import arc.*;
 
 public class MainMenu{
 	public static void main(String[] args){
-		Console con = new Console();
+		Console con = new Console(1280,720);	
 		int intChoice;
 		int intMS;
 		
-		//LoadImage(String 
 		
 
 		con.println("Type '1' to play game");
@@ -16,11 +15,11 @@ public class MainMenu{
 		intChoice = con.readInt();
 	
 	if(intChoice == 1){
-		con.println("hello1");
+		CPTTools.pregame(con);
 		
 	
 	}else if(intChoice == 2){
-		con.println("hello2");
+		
 		CPTTools.leadcode(con);
 		
 
