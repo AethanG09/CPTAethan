@@ -1,4 +1,5 @@
 import arc.*;
+import java.awt.image.*;                       
 
 public class MainMenu{
 	public static void main(String[] args){
@@ -15,7 +16,15 @@ public class MainMenu{
 		intChoice = con.readInt();
 	
 	if(intChoice == 1){
-		CPTTools.pregame(con);
+		String strWord;
+		strWord = CPTTools.pregame(con);
+		con.clear();
+		con.println(strWord);
+		CPTTools.gameplay(con, strWord);
+		
+		
+		
+		
 		
 	
 	}else if(intChoice == 2){

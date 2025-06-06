@@ -7,7 +7,6 @@ public class test2CPT {
 		
 		BufferedImage image = con.loadImage("hangman.jpg");
 		con.drawImage(image, 300, 300);
-		
 		con.repaint();
 	}		
 }
