@@ -83,7 +83,7 @@ public class CPTTools{
 		
 	}
 	public static void gameplay(Console con, String strWord){
-		
+		boolean blnGame = true;
 		int intLength;	
 		int intCount;
 		BufferedImage image = con.loadImage("hangman.jpg");
@@ -97,24 +97,62 @@ public class CPTTools{
 			con.drawLine(intPlace,400, intPlace + 50,400);
 			intPlace = intPlace + 60;
 		}
-		
-		String strGuess;
-		con.println("guess a word");
-		strGuess = con.readLine();
-		if(strGuess.equalsIgnoreCase(strWord)){
-			con.println("you won! also your a dipshit");
-		}else{
-			con.println("you fucking suck");
-			String strLetters[][];
-			strLetters = new String[intLength][2];
+		while(blnGame = true){
+			String strGuess;
+			con.println("guess a word");
+			strGuess = con.readLine();
+			if(strGuess.equalsIgnoreCase(strWord)){
+				con.println("you won!");
+				blnGame = false;
+			}else{
+				con.println("you lost");
+				String strLetters[][];
+				strLetters = new String[intLength][2];
+			
+			//Fill Array + Random Number
 			int intCount2;
-			for(intCount2 = 0; intCount2 < intLength; intCount2++);
+			int intSub = 0;
+			int intRand;
+			for(intCount2 = 0; intCount2 < intLength; intCount2++){
+				strLetters[intCount2][0] = strWord.substring(intSub,intSub+1);
+				intSub = intSub + 1;
+				//~ con.println(strLetters[intCount2][0]);
+				intRand = (int)(Math.random()*100+1);
+				strLetters[intCount2][1] = intRand + "";
+				//~ con.println(strLetters[intCount2][1]);
+			}
 
-			
-			
+			//Bubble Sort
+			int intCount3;
+			int intCount4;
+			String strTemp;
+			for(intCount3 = 0; intCount3 < intLength; intCount3++){
+				for(intCount4 = 0; intCount4 < intLength - 1; intCount4++){
+					
+					if(Integer.parseInt(strLetters[intCount4][1]) < Integer.parseInt(strLetters[intCount4+1][1])){
+						
+						strTemp = strLetters[intCount4][0];
+						strLetters[intCount4][0] = strLetters[intCount4+1][0];
+						strLetters[intCount4+1][0] = strTemp;
+						con.println(strLetters[intCount4][0]);
+						con.println(strLetters[intCount4+1][0]);
+						
+						strTemp = strLetters[intCount4][1];
+						strLetters[intCount4][1] = strLetters[intCount4+1][1];
+						strLetters[intCount4+1][1] = strTemp;
+						con.println(strLetters[intCount4][1]);
+						con.println(strLetters[intCount4+1][1]);
+					}
+				}
+			}
+			con.println("done");
+
 		}
-	}	
+	}
 }
+}
+	
+
 		
 		
 
