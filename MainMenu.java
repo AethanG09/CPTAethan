@@ -1,28 +1,25 @@
-import arc.*;
+ import arc.*;
 import java.awt.image.*;                       
 
 public class MainMenu{
 	public static void main(String[] args){
 		Console con = new Console(1280,720);	
 		int intChoice;
-		int intMS;
 		
+		intChoice = CPTTools.menu(con);
+	
+	if(intChoice == 1){
+		int intWordCount;
+		intWordCount = CPTTools.pregame(con);
+		con.clear();
+		CPTTools.gameplay(con, intWordCount);
 		
-
 		con.println("Type '1' to play game");
 		con.println("Type '2' to see leaderboard");
 		con.println("Type '3' to add theme");
 		con.println("Type '4' to quit");
+		
 		intChoice = con.readInt();
-	
-	if(intChoice == 1){
-		String strWord;
-		strWord = CPTTools.pregame(con);
-		con.clear();
-		con.println(strWord);
-		CPTTools.gameplay(con, strWord);
-		
-		
 		
 		
 		
