@@ -5,3 +5,6 @@ countries
 vacation
 candies
 icecream
+friends
+pokemon
+videogames

@@ -1,0 +1,4 @@
+blastoise
+charizard
+pikachu
+venasaur

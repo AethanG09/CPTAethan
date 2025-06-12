@@ -301,7 +301,10 @@ public class CPTTools{
 								con.drawLine(255,550,355,650);
 							}
 							if(intCount5 == 5){
-								con.println("You Lost");
+								Font font3 = con.loadFont("font.ttf", 80);
+								con.setDrawFont(font3);
+								con.drawString("You Lost", 400, 450);
+								con.drawString("The word was " + strWord, 300,500);
 								blnGame = false;
 								blnWin = false;		
 							}else{
@@ -368,6 +371,8 @@ public class CPTTools{
 		TextOutputFile addtheme = new TextOutputFile("themes.txt", true);
 		addtheme.println(strNewTheme);
 		addtheme.close();
+		con.println("theme successfully added");
+		con.sleep(400);
 	}
 	public static void secretmenu(Console con){
 		con.clear();
@@ -381,6 +386,8 @@ public class CPTTools{
 		con.setDrawFont(font);
 		con.drawString("Why did Homer Simpson bring a ladder to the donut shop?", 300, 200);
 		con.drawString("Because he heard the donuts were on the house!", 300, 300);
+		con.drawString("Press 'enter' to exit", 300, 400);
+		con.readLine();
 	}
 	
 	
