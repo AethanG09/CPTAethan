@@ -1,44 +1,52 @@
- import arc.*;
-import java.awt.image.*;                       
+import arc.*;
+import java.awt.image.*;
+import java.awt.Font;
+import java.awt.Color; 
 
 public class MainMenu{
 	public static void main(String[] args){
-		Console con = new Console(1280,720);	
-		int intChoice;
-		
-		intChoice = CPTTools.menu(con);
-	
-	if(intChoice == 1){
-		int intWordCount;
-		intWordCount = CPTTools.pregame(con);
-		con.clear();
-		CPTTools.gameplay(con, intWordCount);
-		
-		con.println("Type '1' to play game");
-		con.println("Type '2' to see leaderboard");
-		con.println("Type '3' to add theme");
-		con.println("Type '4' to quit");
-		
-		intChoice = con.readInt();
-		
-		
-		
-	
-	}else if(intChoice == 2){
-		
-		CPTTools.leadcode(con);
-		
+		Console con = new Console("HangMan", 1280,720);	
+		int intNum;
 
-	
-	
-	}else if(intChoice == 3){
-		con.println("hello3");
-	
-	}else if(intChoice == 4){
-		con.println("hello4");
-	
-	}else{
-		con.println("what are you doing man...");
+
+	while(true){
+		con.clear();
+		con.setDrawColor(Color.BLACK);
+		con.fillRect(0,0,1280,720);
+		intNum = CPTTools.menu(con);
+		if(intNum == 1){
+			int intWordCount;
+			int intCount;
+			con.clear();
+			con.setDrawColor(Color.BLACK);
+			con.fillRect(0,0,1280,720);
+			intWordCount = CPTTools.pregame(con);
+			con.clear();
+			con.setDrawColor(Color.BLACK);
+			con.fillRect(0,0,1280,720);
+			CPTTools.gameplay(con, intWordCount);
+		}else if(intNum == 2){
+			con.clear();
+			con.setDrawColor(Color.BLACK);
+			con.fillRect(0,0,1280,720);
+			CPTTools.viewLeaderBoard(con);
+		}else if(intNum == 3){
+			con.clear();
+			con.setDrawColor(Color.BLACK);
+			con.fillRect(0,0,1280,720);
+			CPTTools.addTheme(con);
+		}else if(intNum == 4){
+			con.clear();
+			con.setDrawColor(Color.BLACK);
+			con.fillRect(0,0,1280,720);
+			CPTTools.animation(con);
+			con.closeConsole();
+			con.closeWindow();
+			break;
+		}else if(intNum == 5){
+			CPTTools.secretmenu(con);
+			con.println("what are you doing man...");
+		}
 	}
-}
+	}	
 }

@@ -1,10 +1,10 @@
+strawberry
+pancake
+broccoli
+porkchop
+pineapple
+raspberry
+cantaloupe
 spaghetti
 tangerine
-pancake
-strawberry
-porkchop
 mushroom
-broccoli
-raspberry
-pineapple
-cantaloupe

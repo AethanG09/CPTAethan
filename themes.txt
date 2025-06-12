@@ -1,3 +1,7 @@
-food.txt
-animals.txt
-sports.txt
+food
+animals
+sports
+countries
+vacation
+candies
+icecream
