@@ -304,7 +304,7 @@ public class CPTTools{
 								Font font3 = con.loadFont("font.ttf", 80);
 								con.setDrawFont(font3);
 								con.drawString("You Lost", 400, 450);
-								con.drawString("The word was " + strWord, 300,500);
+								con.drawString("The word was " + strWord, 300,520);
 								blnGame = false;
 								blnWin = false;		
 							}else{
